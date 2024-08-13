@@ -17,6 +17,11 @@ public class SchoolController {
 
     @Autowired
     private SchoolService schoolService;
+    
+    @GetMapping("/test/index")
+    public String getString() {
+		return "Project Service";
+	}
 
     @PostMapping("/school")
     public ResponseEntity<School> createSchool(@RequestBody School school) {

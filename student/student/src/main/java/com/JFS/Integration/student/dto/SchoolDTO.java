@@ -1,16 +1,36 @@
 package com.JFS.Integration.student.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 public class SchoolDTO {
     private Long id;
-    private String name;
+    public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return "SchoolDTO [id=" + id + ", name=" + name + ", location=" + location + "]";
+	}
+	public SchoolDTO(Long id, String name, String location) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.location = location;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	private String name;
     private String location;
 }
